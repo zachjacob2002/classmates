@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .custom-bg {
+            background-color: #384E77;
+        }
+        .custom-text {
+            color: #18314F;
+        }
+        .custom-link {
+            color: #384E77;
+        }
+        .container {
+            background-color: #F5FBFF;
+            padding: 20px;
+        }
+        .table:hover tbody tr:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18" fill="none" stroke="%23384E77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M0 9l6-6 6 6"/></svg>');
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="custom-text">Classmate Delete</h1>
+    <form method="post">
+        {% csrf_token %}
+        Are you sure you want to delete "{{ object }}" ?
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+</body>
+</html>
